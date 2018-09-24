@@ -245,8 +245,13 @@
 .gallery {
     display: flex;
 
+    &__item {
+        width: 100%;
+        flex: 1;
+    }
     &__photo {
         width: 100%;
+        flex: 1;
         display: block;
     }
 }
