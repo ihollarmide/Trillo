@@ -16,10 +16,17 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-small) {
+        order: 1;
+        flex: 1;
+        margin-left: -0.5rem;
+    }
+
     @media only screen and (max-width: $bp-smallest) {
         flex: 0 0 100%;
         order: 1;
-        background-color: var(--color-grey-light-2);
+        background-color: var(--color-grey-dark-2);
+        margin: 0;
     }
 
     &__input {
@@ -34,30 +41,61 @@
         transition: all .2s;
         margin-right: -3.25rem;
 
+        @media only screen and (max-width: $bp-small) {
+            background-color: var(--color-grey-dark-2);
+            color: #fff;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+           
+        }
+
         &:focus {
             outline: none;
             width: 100%;
             background-color: var(--color-grey-light-3);
+
+            @media only screen and (max-width: $bp-small) {
+                background-color: var(--color-grey-dark-2);
+                width: 95%;
+            }
         }
 
         &::-webkit-input-placeholder {
             font-weight: 100;
             color: var(--color-grey-light-4);
+
+            @media only screen and (max-width: $bp-small) {
+                color: #fff;
+            }
         }
 
         &::-input-placeholder {
             font-weight: 100;
             color: var(--color-grey-light-4);
+
+            @media only screen and (max-width: $bp-small) {
+                color: #fff;
+            }
         }
     }
 
     &__input:focus + &__button {
         background-color: var(--color-grey-light-3);
+
+        @media only screen and (max-width: $bp-small) {
+            background-color: var(--color-grey-dark-2);
+        }
     }
 
     &__button {
         border: none;
         background-color: var(--color-grey-light-2);
+
+        @media only screen and (max-width: $bp-small) {
+            background-color: var(--color-grey-dark-2);
+        }
+
 
         &:focus {
             outline: none;
@@ -72,6 +110,10 @@
         height: 2rem;
         width: 2rem;
         fill: var(--color-grey-dark-3);
+
+        @media only screen and (max-width: $bp-small) {
+            fill: #fff;
+        }
     }
 }
 
@@ -142,6 +184,10 @@
     @media only screen and (max-width: $bp-medium) {
         display: flex;
         margin: 0;
+    }
+
+    @media only screen and (max-width: 25em) {
+        font-size: 1.2rem;
     }
 
     &__item {
@@ -270,6 +316,10 @@
         flex-wrap: wrap;
     }
 
+    @media only screen and (max-width: 25em) {
+        padding: 1rem 0 .5rem .5rem;
+    }
+
     &__heading {
         font-size: 2.5rem;
         font-weight: 300;
@@ -288,6 +338,10 @@
             padding: 0;
             font-size: 1.5rem;
             letter-spacing: 0;
+        }
+
+        @media only screen and (max-width: 25em) {
+            font-size: 1.3em;
         }
     }
 
@@ -333,6 +387,10 @@
 
     &__icon-location {
         margin-right: .5rem;
+
+        @media only screen and (max-width: 25em) {
+            margin: 0;
+        }
     }
 
     &__rating {
@@ -370,11 +428,11 @@
         }
 
         &--count {
-            font-size: .8rem;
+            font-size: 1rem;
             text-transform: uppercase;
 
             @media only screen and (max-width: $bp-small) {
-                font-size: .5rem;
+                font-size: 1rem;
             }
 
         }
@@ -395,6 +453,14 @@
     cursor: pointer;
     transition: all .2s;
     backface-visibility: hidden;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 25em) {
+        font-size: 1em;
+    }
 
     & span {
         margin-left: 3px;
@@ -439,9 +505,8 @@
 
 /////////////////////////////
 //PARAGRAPH
-.paragraph {
-    hyphens: auto;
-}
+
+
 .paragraph:not(:last-of-type) {
     margin-bottom: 2rem;
 }
@@ -577,14 +642,14 @@
         }
 
         &-name {
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: .4rem;
         }
 
         &-date {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: var(--color-grey-dark-2);
         }
     }
@@ -632,8 +697,8 @@
         text-transform: uppercase;
         margin-bottom: 2.5rem;
 
-        @media only screen and (max-width: $bp-smallest) {
-            font-size: 1rem;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
             margin-bottom: 2rem;
         }
     }
